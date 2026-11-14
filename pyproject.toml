@@ -8,7 +8,9 @@ authors = [
 ]
 requires-python = ">=3.15"
 dependencies = [
+    "anyio>=4.16.0",
     "fastapi[standard]>=0.162.5",
+    "starlette>=1.10.0",
 ]
 
 [project.scripts]
@@ -17,3 +19,9 @@ todo-list = "todo_list:main"
 [build-system]
 requires = ["uv_build>=0.13.5,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.16.0",
+    "pytest>=9.2.0",
+]
