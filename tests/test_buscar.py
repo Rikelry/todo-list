@@ -35,13 +35,6 @@ def test_buscar_tarefa_com_dados_corretos(client):
     assert tarefa["tags"] == dados["tags"]
 
 
-"""
-def test_buscar_tarefa_inexistente(client):
-    resposta = client.get("/tarefas/999")
-
-    assert resposta.status_code == 404
-"""
-
 
 def test_buscar_tarefa_inexistente(client):
     resposta = client.get("/tarefas/999")

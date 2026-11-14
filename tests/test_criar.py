@@ -80,19 +80,6 @@ def test_criar_tarefa_com_varias_tags(client):
     ]
 
 
-"""
-def test_rejeitar_tarefa_sem_titulo(client):
-    resposta = client.post(
-        "/tarefas",
-        json={
-            "descricao": "Tarefa sem título"
-        }
-    )
-
-    assert resposta.status_code == 422
-"""
-
-
 def test_rejeitar_tarefa_sem_titulo(client):
     resposta = client.post(
         "/tarefas",

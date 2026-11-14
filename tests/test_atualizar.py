@@ -114,22 +114,6 @@ def test_data_criacao_permanece_inalterada(client):
     assert resposta.json()["data_criacao"] == data_criacao
 
 
-"""
-def test_atualizar_tarefa_inexistente(client):
-    resposta = client.put(
-        "/tarefas/999",
-        json={
-            "titulo": "Tarefa inexistente",
-            "descricao": "",
-            "concluida": False,
-            "tags": []
-        }
-    )
-
-    assert resposta.status_code == 404
-"""
-
-
 def test_atualizar_tarefa_inexistente(client):
     resposta = client.put(
         "/tarefas/999",
