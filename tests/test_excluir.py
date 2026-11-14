@@ -56,13 +56,6 @@ def test_consultar_tarefa_excluida_retorna_404(client):
     assert resposta.status_code == 404
 
 
-"""
-def test_excluir_tarefa_inexistente(client):
-    resposta = client.delete("/tarefas/999")
-
-    assert resposta.status_code == 404
-"""
-
 
 def test_excluir_tarefa_inexistente(client):
     resposta = client.delete("/tarefas/999")
